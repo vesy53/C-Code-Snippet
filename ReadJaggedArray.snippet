@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Read Jagged Array</Title>
+			<Shortcut>readjagg</Shortcut>
+			<Description>Code snippet for Reading Jagged Array of Int</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>First Type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Name</ToolTip>
+					<Default>name</Default>
+				</Literal>
+				<Literal>
+					<ID>separator</ID>
+					<ToolTip>Separator</ToolTip>
+					<Default>" "</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[for (int row = 0; row < jaggedArr.Length; row++)
+            {
+                int[] numbers = Console.ReadLine()
+                    .Split(" ",
+                        StringSplitOptions
+                        .RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToArray();
+
+                jaggedArr[row] = numbers;
+            }$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

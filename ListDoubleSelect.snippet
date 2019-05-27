@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>ListDoubleSelect</Title>
+			<Shortcut>ld</Shortcut>
+			<Description>Code snippet for selecting numbers</Description>
+			<Author>Microsoft Corporation</Author>
+			<SnippetTypes>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>double</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Variable name</ToolTip>
+					<Default>name</Default>
+				</Literal>
+				<Literal>
+					<ID>spliter</ID>
+					<ToolTip>Spliter</ToolTip>
+					<Default>' '</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[ List<$type$> $name$= Console.ReadLine()
+				 .Split($spliter$, 
+					StringSplitOptions
+					.RemoveEmptyEntries)
+				 .Select($type$.Parse)
+				 .ToList();$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
