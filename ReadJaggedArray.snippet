@@ -3,7 +3,7 @@
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Title>Read Jagged Array</Title>
-			<Shortcut>readjagg</Shortcut>
+			<Shortcut>readmatrix</Shortcut>
 			<Description>Code snippet for Reading Jagged Array of Int</Description>
 			<Author>Microsoft Corporation</Author>
 			<SnippetTypes>
@@ -28,7 +28,7 @@
 					<Default>" "</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[for (int row = 0; row < jaggedArr.Length; row++)
+			<Code Language="csharp"><![CDATA[for (int row = 0; row < matrix.Length; row++)
             {
                 int[] numbers = Console.ReadLine()
                     .Split(" ",
@@ -37,7 +37,7 @@
                     .Select(int.Parse)
                     .ToArray();
 
-                jaggedArr[row] = numbers;
+                matrix[row] = numbers;
             }$end$]]>
 			</Code>
 		</Snippet>
