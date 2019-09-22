@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>methodRun</Title>
+            <Shortcut>methodrun</Shortcut>
+            <Description>Code snippet for method Run in class Engine</Description>
+            <Author>Kevin Hogg</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>methodname</ID>
+                    <ToolTip>Method name</ToolTip>
+                    <Function>MethodName()</Function>
+                    <Default>Run</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp"><![CDATA[public void $methodname$()
+    {
+	       string input = Console.ReadLine();
+
+            while (input.Equals("End") == false)
+            {
+                try
+                {
+                    string[] tokens = input
+                        .Split(" ",
+                            StringSplitOptions
+                            .RemoveEmptyEntries);
+
+                    string command = tokens[0];
+
+                    string result = string.Empty;
+
+                    switch (command)
+                    {
+                        case "":
+                            break;
+                        case "a":
+                            break;
+                        case "aa":
+                            break;
+                        case "aaa":
+                            break;
+                        case "aaaa":
+                            break;
+                        case "aaaaa":
+                            break;
+                    }
+
+                    Console.WriteLine(result);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                input = Console.ReadLine();
+            }
+        $end$
+    }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

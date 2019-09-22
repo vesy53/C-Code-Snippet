@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>unittest</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>assertrows</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>AssertTest</ID>
+          <ToolTip>Assert test</ToolTip>
+          <Default>AssertTest</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ExpectedResult</ID>
+          <ToolTip>Expected result</ToolTip>
+          <Default>ExpectedResult</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>UnderCondition</ID>
+          <ToolTip>Under condition</ToolTip>
+          <Default>UnderCondition</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="assert decl"><![CDATA[Assert.That(
+	() => this,
+	Throws
+	.ArgumentException
+	.With
+	.Message
+	.EqualTo(""));
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

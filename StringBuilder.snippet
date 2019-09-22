@@ -17,8 +17,18 @@
 					<ToolTip>Name</ToolTip>
 					<Default>builder</Default>
 				</Literal>
+        <Literal>
+          <ID>holder</ID>
+          <ToolTip>Place Holder</ToolTip>
+          <Default>$</Default>
+        </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[ StringBuilder $name$ = new StringBuilder();$end$]]>
+			<Code Language="csharp">
+        <![CDATA[ StringBuilder $name$ = new StringBuilder();
+      
+      $name$.AppendLine($holder$"$text$");
+      
+      return $name$.ToString().TrimEnd();$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
